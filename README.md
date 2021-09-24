@@ -1,53 +1,42 @@
-SourceLevel - Guidelines
+Agenda Edu - Guidelines
 ======================
 
-This repository was created to document our guidelines and styleguides maintaining our apps.
+Esse repositório foi criado com o objetivo de documentar os nossos processos de desenvolvimento e como escrevemos código.
 
-As [Hugo Giraudel](http://hugogiraudel.com/) states in [Sass Guidelines](https://sass-guidelin.es/#introduction):
+Assim como [Hugo Giraudel](http://hugogiraudel.com/) diz em [Sass Guidelines](https://sass-guidelin.es/#introduction):
 
-> A styleguide is not just a pleasing document to read, picturing an ideal state for your code. It is a key document in a project’s life, describing how and why code should be written. It may look like overkill for small projects, but it helps a lot in keeping the codebase clean, scalable and easily maintainable.
+> Um styleguide não é apenas um documento agradável de ler, ou a definição de como o código deve ser escrito idealmente. Ele é um documento chave na vida do projeto, descrevendo como e porque o código deve ser escrito. Ele pode parecer um exagero para projetos pequenos, mas ele ajuda muito a manter a codebase limpa, escalável e fácil de manter.
 >
-> Needless to say, the more developers involved on a project, the more code guidelines are needed. Along the same lines, the bigger the project, the more a styleguide is a must.
+> Nem preciso dizer que, quanto mais programadores no projeto, mais guidelines não necessárias. Na mesma linha, quanto maior é o projeto, mais styleguides são necessárias.
 
-And Harry Roberts from [CSS Guidelines](http://cssguidelin.es/#the-importance-of-a-styleguide):
+E Harry Roberts em [CSS Guidelines](http://cssguidelin.es/#the-importance-of-a-styleguide):
 
-> A coding styleguide (note, not a visual styleguide) is a valuable tool for teams who:
-> * build and maintain products for a reasonable length of time;
-> * have developers of differing abilities and specialisms;
-> * have a number of different developers working on a product at any given time;
-> * on-board new staff regularly;
-> * have a number of codebases that developers dip in and out of.
+> Styleguides de código (note, não um styleguide visual) é uma valiosa ferramenta para times que:
+> * constroem e mantêm produtos por uma quantidade considerável de tempo;
+> * tem desenvolvedores com diferentes habilidades e especialidades;
+> * tem diferentes desenvolvedores trabalhando no projeto a qualquer momento;
+> * traz novas pessoas para o projeto regularmente;
+> * tem várias codebases que os desenvolvedores entram e saem.
 
-Our purpose is to define a standard way to write code in a clear and semantic form. We care a lot with code legibility and always worried if other developers will understand easily what we're doing and how we're thinking about code..
+Nosso objetivo é definir um padrão para escrever código limpo e semântico. Nós nos preocupamos muito com a legibilidade de código e se outras pessoas desenvolvedoras conseguem entender facilmente o que estamos fazendo e como estamos pensando sobre o código.
 
-The entire team should contribute with this repo, giving suggestions and making changes on it. Welcome!
+O time inteiro pode contribuir com esse repositório, dando sugestões e fazendo mudanças. Seja bem-vindo(a)! : )
 
-First-timer? We recommend start reading `General/Editor` and then `Process Workflow` :)
+Primeira vez aqui? Nós recomendamos começar lendo `Configurando o editor de código` e depois `Fluxo de trabalho`.
 
-## Our Coding Styleguide
+## Nosso estilo de código
 
-Instead of creating a specific coding styleguide for each programming language/tool that we use, we've have decided to just use linters configuration files to indicate which patterns we follow. All linters configuration files can be found in a single repository at [sourcelevel/linters](https://github.com/sourcelevel/linters).
+Ao invés de criar styleguides específicos para cada linguagem que utilizamos, nós decidimos apenas utilizar linters e deixar os arquivos de configuração nos nossos projetos, assim facilitando o uso dos nossos styleguides. Você pode ler `Configurando o editor de código` para entender como utilizar os linters no seu editor de código favorito.
 
-## Our Guidelines
+## Nossas Guidelines
 
-*   [General/Editor](https://github.com/sourcelevel/guidelines/blob/master/resources/general.md)
-*   [Commit Messages](https://github.com/sourcelevel/guidelines/blob/master/resources/commit_messages.md)
+*   [Configurando o editor de código](https://github.com/sourcelevel/guidelines/blob/master/resources/general.md)
+*   [Fluxo de trabalho](https://github.com/sourcelevel/guidelines/blob/master/resources/process_workflow.md)
 *   [Pull Requests](https://github.com/sourcelevel/guidelines/blob/master/resources/pull_requests.md)
-*   [Process Workflow](https://github.com/sourcelevel/guidelines/blob/master/resources/process_workflow.md)
 *   [Git Workflow](https://github.com/sourcelevel/guidelines/blob/master/resources/git_workflow.md)
 
-## References
+## Referências
 
-*   [Plataformatec](http://guidelines.plataformatec.com.br/)
+*   [Sourcelevel](https://github.com/sourcelevel/guidelines)
 *   [CSS Guidelines](http://cssguidelin.es/)
 *   [Sass Guidelines](https://sass-guidelin.es)
-*   [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
-*   [CSS-Tricks - Sass Style Guide](https://css-tricks.com/sass-style-guide/)
-*   [Mark Otto - Code Guide](https://github.com/mdo/code-guide)
-*   [Future Friendly Style Guides](https://speakerdeck.com/lukebrooker/future-friendly-style-guides)
-*   [Styleguides Examples](http://styleguides.io/examples)
-
-## TODO
-
-* Detail how to maintain this guide
-* Find a better tool to draw concept/branch node map
