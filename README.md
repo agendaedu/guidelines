@@ -1,5 +1,5 @@
 Agenda Edu - Guidelines
-======================
+=======================
 
 Esse repositório foi criado com o objetivo de documentar os nossos processos de desenvolvimento e como escrevemos código.
 
@@ -30,7 +30,7 @@ Ao invés de criar styleguides específicos para cada linguagem que utilizamos, 
 
 ## Nossas Guidelines
 
-*   [Configurando o editor de código](https://github.com/sourcelevel/guidelines/blob/master/resources/general.md)
+*   [Configurando o editor de código](https://github.com/agendakids/guidelines/blob/main/resources/code_editor.md)
 *   [Fluxo de trabalho](https://github.com/sourcelevel/guidelines/blob/master/resources/process_workflow.md)
 *   [Pull Requests](https://github.com/sourcelevel/guidelines/blob/master/resources/pull_requests.md)
 *   [Git Workflow](https://github.com/sourcelevel/guidelines/blob/master/resources/git_workflow.md)
