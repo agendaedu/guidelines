@@ -1,116 +1,87 @@
 Pull Requests
 =============
 
+Pull Request (PR) é uma maneira de incluir mudanças em um repositório do GitHub onde um contribuidor
+pede para algumas pessoas revisarem o seu código e após um determinado número de aprovações
+a mudança é aplicada no repositório. PRs tem vantagens bem interessantes, como:
 
-Pull Request (PR) or Merge Request (MR) in GitLab, is a great
-tool to review and discuss solutions and implementations.
+- Ajuda o time a saber o que está sendo alterado
+- Facilita a colaboração de pessoas desenvolvedoras para entregar um código de maior qualidade
+- Facilita a disseminação de conhecimento
+- Ajuda a documentar alterações
 
-All changes made in any repository should be integrated using a Pull Request.
-This will help the entire team to know what is being delivered and help
-each other in improving code quality and propagate knowledge between developers.
+Por conta de todas essas vantagens, toda alteração, independente do repositório, deve ser feita por
+meio de um PR.
 
-## Opening Pull Requests
+## Abrindo Pull Requests
 
-### Title
+### Título
 
-You can use the following pattern for the title:
+Os títulos devem seguir o seguinte padrão:
 
 ```
-Example of a nice PR title
+[Código da epic][Código da task] Título da task do Jira
 ```
 
-* Title must be capitalized and conjugated in the present
-* Title must be 50 chars or less
-* You don't need to worry about User Story number in the title, since it is present
-in branch name
+Exemplo:
+```
+[SE-3443][SE-3444] Criar endpoint de consumo de dados
+```
 
-### Description
+### Descrição
 
-* Describe what you did/why you did it using description field remembering that reviewers need
-your context to review your PR
+A descrição do seu PR precisa responder duas perguntas:
 
-We already have some Pull Requests templates according to the repository, feel free to
-suggest enhancements for them.
+- Qual o objetivo do seu PR?
+- O que você fez para atingir o objetivo?
 
-### Labels
+Você sabe que a sua descrição está boa quando até uma pessoa de fora do seu contexto consegue revisar
+o seu PR.
 
-Labels are a great way to organize different types of PR
+### Etiquetas
 
-* Always use labels to allow filtering and better usability in listing
-do code review
-* Select a label that best describes the purpose of PR
+Utilizamos etiquetas para organizar os nosso PRs, sempre adicione etiquetas que tem relação com o seu PR.
 
-### Reviewers
+### Revisores
 
-* You can select the whole team you're working with or people individually. As we use
-[Pull Reminders](https://pullreminders.com/), it will take care about notifying everyone
-* Sure that, if you want, you can indicate `Reviewers` that has more knowledge about that
-piece of code you're changing or ask for some extra guidance on it
-* Select as Reviewer who didn't participated of development of the code
+Sempre que abrir um PR, você vai precisar marcar algumas pessoas para revisar o seu código, é necessário ao
+menos duas aprovações para que o seu PR possa ser mesclado, baseado nisso, você pode chamar 3-5 pessoas, sendo
+recomendável que uma delas seja de fora do seu contexto (outro squad, por exemplo).
 
-### Assignees
+### Assinaturas
 
-Assignees are members that worked with you in your PR or specific issues.
+A pessoa responsável pelo PR deve assiná-lo.
 
-* Select yourself and people that pair programmed with you
+## Recebendo revisões
 
-## Receiving reviews
+Nesse ponto, você já sabe como abrir um bom PR, no entanto, existem mais algumas práticas que você
+pode aderir para melhorar as revisões que você vai receber, sempre que abrir um PR considere:
 
-As everyone will be able to review your changes, discussions will be raised, code samples will
-be shown, experiences will be shared. Everything is part of the review process.
+- Adicionar imagens ou vídeos: se o seu PR envolve mudanças visuais ou é uma correção de bug,
+adicionar imagens ou vídeos pode ajudar muito na revisão.
+- Fazer comentários sobre o código: você pode adicionar comentários no PR para explicar o porque
+você seguiu uma determinada abordagem, ou até para ressaltar uma parte do código que você ainda
+não está satisfeito, e assim guiar o seu review. No final das contas, ao comentar o seu PR você
+estará documentando uma alteração no projeto, o que poderá ser bem útil no futuro.
+- Leve sugestões e comentários como um aprendizado: sempre que alguém questionar ou pedir alterações
+no seu código será com o objetivo de te ajudar a entregar a melhor solução possível, e não de fazer
+você se sentir mal, portanto, sempre encare as revisões como uma oportunidade de evolução.
 
-When opening a Pull Request and being reviewed, consider the following:
+## Revisando Pull Requests
 
-* Create a well-explained description. When writing, try to describe the changes to a person
-who is not in the context of the problem
-* If your change includes any UI changes, consider adding a screenshot on its description
-* Answer to questions and comments that will come
-* Don’t take it personally. Nobody is doing it in order to make you feel bad or let you
-uncomfortable among other developers
-* Always be humble. Learn from your mistakes and try to create notes of your common mistakes
-if realize that you're committing it more than once or twice
-* Make sure you fully understand the other alternatives before choosing one of them or keeping
-the solution you’ve provided. If you did not fully understand why somebody asked you to change
-something, ask for explanations and/or examples.
-* Avoid interrupting your co-worker to ask for reviews if you already send it in your Slack's `#dev`
-channel (except for `expedite` tasks).
-* Be kind :green_heart:
+Além de receber, você também vai precisar revisar PRs, tanto de membros do seu squad quanto de fora.
+Considere seguir as seguintes práticas sempre que precisar revisar algum PR:
 
-## Reviewing Pull Requests
-
-* Look out for code smells (From the Wikipedia definition: `[code smells] indicate weaknesses in design
-that may be slowing down development or increasing the risk of bugs or failures in the future`) that
-should be removed to avoid future problems with the apps.
-* Share, whenever possible, different solutions for a given problem through pointing code examples.
-The examples can come from another project or written by you just for illustration purposes.
-* Don’t be afraid of asking for documentation when necessary. Many times the discussions generated
-by a Pull Request should be added to the project in the form of documentation, even things related
-to specific parts of the code or the development workflow of the project. We should not let important
-decisions to exist only in the form of Pull Request comments since other
-developers might have a hard time searching through old Pull Requests to find the reasons behind
-an existing implementation or design.
-* If in the middle of discussion you find something interesting to document, do it. The entire team
-will be thankful for that.
-* If the Pull Request goals and motivations aren’t clear for you, ask the Pull Request author for
-a better description and explanations. Remember that Pull Requests aren’t only about adding code
-but adding business knowledge too.
-* Although the commits in a Pull Request are merged together they should be meaningful on their own.
-Comment about better commit messages and point to relevant documentation when necessary
-* Appreciate the quality of the work of your team
-* Try to take the most of out the GitHub UI and the GitHub Flavored Markdown when reviewing code:
-for highlighting snippets, doing references between commits and other issues and calling other
-developers to join you in the review.
-* Avoid commenting on commits directly instead of
-the Pull Request diff, since it pollutes the Pull Request page and such comments won’t be
-collapsed when the related lines get changed and/or fixed by a new commit.
-
-### Source
-
-Most of the explanation comes from [Plataformatec Guidelines](http://guidelines.plataformatec.com.br/pull-requests.html).
-
-### Articles
-
-If you want to read more about this subject, check these articles:
-
-* [There’s a human on the other side of your code review](https://medium.com/@tadasant/theres-a-human-on-the-other-side-of-your-code-review-9732cc15bfee)
-* [Unlearning toxic behaviors in a code review culture](https://medium.com/@sandya.sankarram/unlearning-toxic-behaviors-in-a-code-review-culture-b7c295452a3c)
+- Procure por code smells: basicamente, code smells são padrões ruins de código que podem trazer problemas
+no futuro, sempre que encontrar um code smell alerte a pessoa sobre o problema e se possível, mostre uma
+alternativa. [Aqui](https://refactoring.guru/refactoring/smells) você pode aprender mais sobre o assunto.
+- Compartilhe alternativas: sempre que possível compartilhe outras maneiras de atingir o objetivo colocado no PR.
+- Sempre tire suas dúvidas: sempre que algo não estiver claro, pergunte, é muito importante que você tenha
+entendido o problema e a solução antes de aprovar ou pedir alterações no código.
+- Olhe os commits: certifique que a pessoa fez bons commits, caso contrário, alerte a pessoa sobre o problema.
+- Verifique a existência de testes: adição ou alteração de comportamento sempre devem vir acompanhadas de uma boa
+suite de testes, caso a pessoa não escreveu os testes, peça que ela faça isso.
+- Busque a simplicidade: tente analisar o código da pessoa de modo a encontrar maneiras mais simples de resolver
+o problema, caso encontre, faça uma sugestão de mudança.
+- Aprecie um bom trabalho: caso não tenha encontrado nada para ser melhorado, isso é um sinal que o autor do PR
+fez um bom trabalho, considere elogiar essa pessoa, pois isso pode incentivar ela a continuar entregando bom código.
