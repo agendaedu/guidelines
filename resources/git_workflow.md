@@ -1,62 +1,35 @@
 Git Workflow
 ============
 
-We follow some patterns on creating branches and this is related to our workflow in `ClubHouse`.
+## Criação de Branches
 
-If you didn't read [Pull Requests](https://github.com/sourcelevel/guidelines/blob/main/resources/pull_requests.md), we recommend to read it before this guide.
+Nós seguimos alguns padrões para criação de branches que são relacionados com o nosso fluxo de
+desenvolvimento do Jira, portanto, antes de ler esse guideline leia [Fluxo de trabalho](https://github.com/agendakids/guidelines/blob/main/resources/workflow.md).
 
-## Branches
+Abaixo está a explicação de cada tipo de branch que temos no momento:
 
-We work with a single stable branch: `main`. Everything that is merged into it, we assume that already passed in the `Test phase` properly.
+- Branch principal: nossa branch principal é a `master`, nós assumimos que todo código
+mesclado na `master` já foi revisado, testado e está pronto para ser enviado para produção.
+- Epics: cada epic deverá ter uma branch que tem como base a `master`, seu nome deve seguir
+o seguinte padrão `epic/[código da epic]`, por exemplo `epic/se-1234`.
+- Tasks: tasks também devem ter suas branches, podendo ter como base a `master` ou alguma epic,
+em todos os casos, seu nome deve seguir o padrão `[tipo da task]/[código da task]`, por exemplo
+`feature/se-1234`, `bug/se-1234`, `techtask/se-1234`, etc.
+- Extra: branches de modificações que não tem relação com a sua sprint devem ser criadas seguindo
+o padrão `extra/[sua modificação]`, por exemplo `extra/update_jest`.
 
-Now that you're familiar with `User Story`, let's understand how it reflects our branches and accordingly to our Pull Requests:
 
-### User Story
+## Atualização de Branches
 
-#### User Story card
+Dependendo do tipo da branch utilizamos uma abordagem diferente de atualização, quando a branch é
+particular, ou seja, somente você está trabalhando nela, atualizamos a branch por meio de um `rebase`,
+o que nos permite ter um histórico de commits mais limpo. Agora quando a branch é compartilhada, ou seja,
+mais de um pessoa está trabalhando nela, atualizamos a branch por meio de um `merge`, que tem a vantagem
+de não quebrar a compatibilidade da branch entre as pessoas que estão trabalhando nela.
 
-First, we create a branch using `main` as the base with the following pattern:
+## Commits
 
-* `chddd/user-story-card-title`
-
-Where `ddd` stands for Story Card number in ClubHouse, check some examples of naming User Story branches:
-
-* `ch897/collect-issues-line-numbers`
-* `ch569/edit-reviewer-author`
-* `ch642/clustering-contribution-data`
-
-#### More than a single branch
-
-If you realize that a single branch won't be enough, you can create more branches to detail
-your work of this User Story card. For example, let us imagine the following scenario:
-
-We have a User Story `Collect issues line numbers` which its number in ClubHouse is `123`.
-
-![https://github.com/sourcelevel/guidelines/blob/main/images/user_story_flow.png](https://github.com/sourcelevel/guidelines/blob/main/images/user_story_flow.png)
-
-In this case, we can start creating the branch for it using `main` as the base:
-
-```
-git checkout -b ch123/collect-issues-line-numbers
-```
-
-After analyzing the requirements we noticed that a single Pull Request would carry too many
-changes. So we've decided to break down our changes in n pull requests, to do so we start
-creating a new branch using `ch123/collect-issues-line-numbers` as the base, then create the
-new one:
-
-```
-git checkout -b ch123/xz-add-database-migrations
-```
-
-Where `xz` stands for initials of developer, check some examples of naming sub User Story branches:
-
-* `ch321/wt-fix-reviews-count-in-repository-page`
-* `ch781/gg-remove-sales-machine-from-subscriptions`
-
-If you developed that change in pair programming, you can use both initials ordered alphabetically:
-
-* `ch821/gg-wt-add-call-to-action-to-landing-page`
-
-Note that you're able to open new branches and Pull Requests as you consider necessary on working in a User Story card.
-To decide that, always keep in mind: how easy would be to review your code, so Pull Request size will be your guide.
+Para criar bons commits, evite adicionar alterações não relacionadas em um mesmo commit, e sempre utilize
+a mensagem de commit para descrever o que foi feito, evite coisas como "Fix bug" ou "Improve service",
+mensagens como essas não dizem o que as alterações do commit fazem, um bom exemplo seria "Fix bug when sending
+a video message".
