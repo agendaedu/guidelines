@@ -6,7 +6,7 @@ Nesta seção mostraremos práticas e configurações para que você possa segui
 ## Legibilidade
 
 Evite linhas de código muito grandes, o ideal é que você possa ler a linha inteira sem precisar
-mover o editor para a direita. Acreditamos que o ideal seja uma linha com no máximo 120 caracteres,
+mover o editor para a direita. Acreditamos que o ideal seja uma linha com no máximo 90 caracteres,
 se usar os nossos linters, eles vão te avisar quando você ultrapassar esse limite, caso contrário,
 você pode configurar o seu editor de código para te ajudar a identificar o tamanho da sua linha:
 
@@ -15,7 +15,7 @@ você pode configurar o seu editor de código para te ajudar a identificar o tam
 Aperte `CTRL + Shit + P`, busque por `Open Settings (JSON)` e adicione essa linha no seu arquivo
 de configuração:
 ```json
-"editor.rulers": [90,120],
+"editor.rulers": [90],
 ```
 Você vai perceber que duas linhas verticais vão ser renderizadas, elas vão te ajudar a ficar dentro
 do limite de tamanho.
