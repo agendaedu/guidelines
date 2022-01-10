@@ -21,11 +21,8 @@ o padrão `extra/[sua modificação]`, por exemplo `extra/update_jest`.
 
 ## Atualização de Branches
 
-Dependendo do tipo da branch utilizamos uma abordagem diferente de atualização, quando a branch é
-particular, ou seja, somente você está trabalhando nela, atualizamos a branch por meio de um `rebase`,
-o que nos permite ter um histórico de commits mais limpo. Agora quando a branch é compartilhada, ou seja,
-mais de um pessoa está trabalhando nela, atualizamos a branch por meio de um `merge`, que tem a vantagem
-de não quebrar a compatibilidade da branch entre as pessoas que estão trabalhando nela.
+Sempre tente atualizar suas branches utilizando `rebase`, isso vai nos ajudar a ter um histórico de commits
+mais limpo e organizado.
 
 ## Commits
 

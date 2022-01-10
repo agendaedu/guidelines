@@ -65,6 +65,13 @@ Tasks que representam demandas vindas do time de suporte. Exemplos:
 - Recuperar mensagens excluídas pela plataforma
 - Atualizar em massa os assessores das escolas
 
+### Test
+Tasks para testar algo:
+
+- Testar componente de edição de texto
+- Testar exclusão de disciplinas
+- Testar listagem de chats dentro dos canais
+
 ## Criando uma boa task
 Para que o seu trabalho e do seu time fluam bem, é fundamental que as tasks sejam bem cadastradas,
 observamos que tasks bem descritas melhoram muito o cycle time.
