@@ -40,3 +40,4 @@ Ao invés de criar styleguides específicos para cada linguagem que utilizamos, 
 *   [Sourcelevel](https://github.com/sourcelevel/guidelines)
 *   [CSS Guidelines](http://cssguidelin.es/)
 *   [Sass Guidelines](https://sass-guidelin.es)
+*   [Typescript Guidelines](https://basarat.gitbook.io/typescript/styleguide)
